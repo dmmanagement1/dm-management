@@ -1,50 +1,126 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const SITE = {
+  name: "DM Management Group",
+  tagline: "Innovate with Custom Apps",
+  subtagline:
+    "We transform ideas into powerful, user-friendly applications. From strategy to launch, we build clean, secure, and scalable products.",
+  email: "hello@dmmanagementgroup.com",
+};
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{SITE.name} — {SITE.tagline}</title>
+    <meta name="description" content={SITE.subtagline} />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: #0b0d12;
+        color: #ffffff;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 48px 24px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 64px;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .btn {
+        background: #3b82f6;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: 52px;
+        line-height: 1.05;
+        margin: 0 0 16px;
+      }
+      p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 640px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 56px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 24px;
+      }
+      footer {
+        margin-top: 80px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 32px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <strong>{SITE.name}</strong>
+        <a class="btn" href="#contact">Book a Call</a>
+      </header>
+
+      <h1>{SITE.tagline}<br />for modern businesses.</h1>
+      <p>{SITE.subtagline}</p>
+
+      <section class="grid">
+        <div class="card">
+          <strong>Web Applications</strong>
+          <p>Dashboards, portals, internal tools, and SaaS platforms.</p>
+        </div>
+        <div class="card">
+          <strong>Mobile Apps</strong>
+          <p>iOS and Android apps built for performance and scale.</p>
+        </div>
+        <div class="card">
+          <strong>Automation</strong>
+          <p>Custom workflows that save time and reduce manual work.</p>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top: 72px">
+        <h2>Contact</h2>
+        <p>
+          Email us at
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        </p>
+      </section>
+
+      <footer>
+        © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+      </footer>
+    </div>
+  </body>
 </html>
+
