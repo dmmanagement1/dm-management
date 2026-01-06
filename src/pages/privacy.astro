@@ -32,3 +32,141 @@ const COMPANY = {
       p, li {
         color: rgba(255, 255, 255, 0.75);
         line-height: 1.6;
+      }
+      a {
+        color: #3b82f6;
+      }
+      footer {
+        margin-top: 64px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 24px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: {new Date().toLocaleDateString()}</p>
+
+      <p>
+        This Privacy Policy describes how {COMPANY.name} ("we", "us", or "our")
+        collects, uses, discloses, and processes information across our websites,
+        applications, software products, platforms, and services (collectively,
+        the “Services”).
+      </p>
+
+      <p>
+        This policy applies to all current and future products, applications, and
+        services developed, operated, or maintained by {COMPANY.name}, whether
+        accessed via web, mobile application, desktop software, APIs, or other
+        technologies.
+      </p>
+
+      <h2>Information We Collect</h2>
+      <p>
+        We may collect information that you voluntarily provide, information
+        automatically collected through your use of our Services, and
+        information obtained from third parties, as permitted by law.
+      </p>
+
+      <p>Information we collect may include, but is not limited to:</p>
+      <ul>
+        <li>Names, email addresses, phone numbers, and contact details</li>
+        <li>Account information and user-generated content</li>
+        <li>Device, browser, operating system, and usage data</li>
+        <li>Log data, analytics data, and diagnostic information</li>
+        <li>Communications and support inquiries</li>
+        <li>Any other information you choose to provide</li>
+      </ul>
+
+      <h2>How We Use Information</h2>
+      <p>
+        We may use information collected for any lawful business purpose,
+        including but not limited to:
+      </p>
+
+      <ul>
+        <li>Providing, operating, maintaining, and improving our Services</li>
+        <li>Developing new products, features, and functionality</li>
+        <li>Analytics, research, testing, and performance monitoring</li>
+        <li>Security, fraud prevention, and abuse detection</li>
+        <li>Customer support, communications, and service-related notices</li>
+        <li>Compliance with legal obligations and enforcement of our rights</li>
+        <li>Business operations, internal reporting, and administrative purposes</li>
+      </ul>
+
+      <h2>Legal Bases for Processing</h2>
+      <p>
+        Where required by applicable law, we process personal information based
+        on one or more of the following legal grounds: consent, performance of a
+        contract, compliance with legal obligations, and our legitimate business
+        interests.
+      </p>
+
+      <h2>Cookies and Tracking Technologies</h2>
+      <p>
+        We may use cookies, pixels, SDKs, analytics tools, and similar
+        technologies to operate our Services, understand usage patterns, improve
+        performance, and support lawful business activities.
+      </p>
+
+      <h2>Third-Party Services</h2>
+      <p>
+        We may share information with service providers, partners, contractors,
+        and vendors who assist us in operating our Services, provided such
+        parties are authorized to process information on our behalf or as
+        permitted by law.
+      </p>
+
+      <h2>Data Retention</h2>
+      <p>
+        We retain information for as long as reasonably necessary to fulfill the
+        purposes described in this Privacy Policy, unless a longer retention
+        period is required or permitted by law.
+      </p>
+
+      <h2>Data Security</h2>
+      <p>
+        We implement reasonable administrative, technical, and organizational
+        safeguards to protect information. However, no system can be guaranteed
+        to be 100% secure.
+      </p>
+
+      <h2>Your Rights and Choices</h2>
+      <p>
+        Depending on your location and applicable law, you may have rights to
+        access, correct, delete, or object to certain processing of your personal
+        information. Requests may be submitted to
+        <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>.
+      </p>
+
+      <h2>Children’s Privacy</h2>
+      <p>
+        Our Services are not directed to children under the age required by
+        applicable law, and we do not knowingly collect personal information from
+        children without appropriate consent.
+      </p>
+
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy at any time. Changes will be effective
+        upon posting the updated policy on this page.
+      </p>
+
+      <h2>Contact Us</h2>
+      <p>
+        If you have questions about this Privacy Policy or our data practices,
+        contact us at
+        <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>.
+      </p>
+
+      <footer>
+        © {new Date().getFullYear()} {COMPANY.name}. All rights reserved.
+      </footer>
+    </div>
+  </body>
+</html>
+
